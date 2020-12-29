@@ -7,6 +7,11 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.content
+
+    def is_popular(self):
+        return self.num_views > 5
 
 
 class Comment(models.Model):
@@ -15,3 +20,6 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.content
