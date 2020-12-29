@@ -57,6 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'poruke/templates')],
+        'DIRS': ['templates', os.path.join(BASE_DIR, 'demo_app/../templates')],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,6 +89,7 @@ DATABASES = {
     }
 }
 
+LOGIN_REDIRECT_URL = '/articles'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

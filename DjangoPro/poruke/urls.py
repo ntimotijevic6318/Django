@@ -8,6 +8,4 @@ urlpatterns = [
     path('rec/<str:rec>', views.word, name='poruke_rec'),
     path('routes/', views.params, name='poruke_params'),
     path('hello/' , views.hello , name= 'poruke_hello')
-
-
 ]
