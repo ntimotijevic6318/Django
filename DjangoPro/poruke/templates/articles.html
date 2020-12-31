@@ -7,7 +7,7 @@
 {%  block content %}
     <div class="list-group">
         {% for article in articles %}
-            <a class="list-group-item list-group-item-action" href="{% url 'demo_app:article' article.id %}">
+            <a class="list-group-item list-group-item-action" href="{% url 'poruke:article' article.id %}">
                 {{ article.title }}
             </a>
         {% endfor %}

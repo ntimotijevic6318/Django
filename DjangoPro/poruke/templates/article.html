@@ -7,7 +7,7 @@
             <h1>
                 {{ article.title }}
                 {% if perms.demo_app.change_article %}
-                    <a href="{% url 'demo_app:edit' article.id %}">
+                    <a href="{% url 'poruke:edit' article.id %}">
                         <span class="badge badge-primary">Edit</span>
                     </a>
                 {% endif %}

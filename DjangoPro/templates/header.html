@@ -1,7 +1,7 @@
 {% load static %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{% url 'demo_app:articles' %}">
+    <a class="navbar-brand" href="{% url 'poruke:articles' %}">
         <img src="{% static 'img/rocket.png' %}" width="30" height="30" class="d-inline-block align-top" alt="logo"/>
         Vezbe 13
     </a>
@@ -9,9 +9,9 @@
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
             {% if not perms.demo_app.add_article %}
-                <a class="nav-link disabled" href="{% url 'demo_app:new' %}">New article</a>
+                <a class="nav-link disabled" href="{% url 'poruke:new' %}">New article</a>
             {% else %}
-                <a class="nav-link" href="{% url 'demo_app:new' %}">New article</a>
+                <a class="nav-link" href="{% url 'poruke:new' %}">New article</a>
             {% endif %}
         </li>
     </ul>
